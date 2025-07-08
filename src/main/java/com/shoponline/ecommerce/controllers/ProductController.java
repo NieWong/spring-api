@@ -1,6 +1,6 @@
 package com.shoponline.ecommerce.controllers;
 
-import com.shoponline.ecommerce.dtos.ProductDto;
+import com.shoponline.ecommerce.dtos.product.ProductDto;
 import com.shoponline.ecommerce.entities.Product;
 import com.shoponline.ecommerce.mappers.ProductMapper;
 import com.shoponline.ecommerce.repositories.ProductRepository;

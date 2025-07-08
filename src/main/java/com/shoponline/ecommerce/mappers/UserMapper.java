@@ -1,8 +1,8 @@
 package com.shoponline.ecommerce.mappers;
 
-import com.shoponline.ecommerce.dtos.RegisterUserRequest;
-import com.shoponline.ecommerce.dtos.UpdateUserRequest;
-import com.shoponline.ecommerce.dtos.UserDto;
+import com.shoponline.ecommerce.dtos.user.RegisterUserRequest;
+import com.shoponline.ecommerce.dtos.user.UpdateUserRequest;
+import com.shoponline.ecommerce.dtos.user.UserDto;
 import com.shoponline.ecommerce.entities.User;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

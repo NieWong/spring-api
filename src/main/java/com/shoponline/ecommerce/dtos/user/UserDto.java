@@ -1,4 +1,4 @@
-package com.shoponline.ecommerce.dtos;
+package com.shoponline.ecommerce.dtos.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,4 +9,5 @@ public class UserDto {
     private Long id;
     private String name;
     private String email;
+    private String phoneNumber;
 }

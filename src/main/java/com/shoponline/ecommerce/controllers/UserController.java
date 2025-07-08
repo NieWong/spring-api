@@ -1,7 +1,11 @@
 package com.shoponline.ecommerce.controllers;
 
-import com.shoponline.ecommerce.dtos.*;
-import com.shoponline.ecommerce.services.UserService;
+import com.shoponline.ecommerce.dtos.user.ChangePasswordRequest;
+import com.shoponline.ecommerce.dtos.user.RegisterUserRequest;
+import com.shoponline.ecommerce.dtos.user.UpdateUserRequest;
+import com.shoponline.ecommerce.dtos.user.UserDto;
+import com.shoponline.ecommerce.services.user.UserAuthService;
+import com.shoponline.ecommerce.services.user.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -17,6 +21,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 public class UserController {
 
     private final UserService userService;
+    private final UserAuthService userAuthService;
 
     @GetMapping
     public ResponseEntity<Page<UserDto>> getUsers(
@@ -67,7 +72,7 @@ public class UserController {
             @PathVariable Long id,
             @Valid @RequestBody ChangePasswordRequest request
     ) {
-        userService.changePassword(id, request);
+        userAuthService.changePassword(id, request);
         return ResponseEntity.noContent().build();
     }
 }
